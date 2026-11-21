@@ -1,0 +1,25 @@
+{
+  "name": "construct",
+  "description": "Claude Code plugins: cross-project memory and a Slack board that drafts replies for your approval",
+  "owner": {
+    "name": "David Kulhanek"
+  },
+  "plugins": [
+    {
+      "name": "adaptive-cognitive-memory",
+      "source": {
+        "source": "github",
+        "repo": "d2a8k3u/adaptive-cognitive-memory"
+      },
+      "description": "Local cross-project memory for Claude Code: calibrated recall through hooks, a two-phase store with conflict keys, usage receipts and continuous capture"
+    },
+    {
+      "name": "slack-board",
+      "source": {
+        "source": "github",
+        "repo": "d2a8k3u/slack-board"
+      },
+      "description": "Board of Slack messages for you: drafts replies in your tone of voice and sends them after your approval"
+    }
+  ]
+}
