@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate the marketplace
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm install --global @anthropic-ai/claude-code
+      - run: claude plugin validate .
+      - name: Check that every plugin repository serves its manifest
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          status=0
+          while read -r name repo; do
+            manifest_name=$(gh api -H "Accept: application/vnd.github.raw+json" "repos/$repo/contents/.claude-plugin/plugin.json" 2>/dev/null | jq -r '.name // empty' 2>/dev/null) || true
+            if [ "$manifest_name" != "$name" ]; then
+              echo "::error::$name: github.com/$repo has no public .claude-plugin/plugin.json named \"$name\" on its default branch"
+              status=1
+            fi
+          done < <(jq -r '.plugins[] | select(.source | objects | .source == "github") | "\(.name) \(.source.repo)"' .claude-plugin/marketplace.json)
+          exit "$status"
