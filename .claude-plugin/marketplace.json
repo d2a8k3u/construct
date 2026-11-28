@@ -11,7 +11,20 @@
         "source": "github",
         "repo": "d2a8k3u/adaptive-cognitive-memory"
       },
-      "description": "One local memory for Claude Code, Codex and OpenCode, shared by every project: measured recall through hooks, explicit capture with a two-phase store, nothing leaves your machine"
+      "description": "One local memory for Claude Code, Codex and OpenCode, shared by every project: measured recall through hooks, explicit capture, and memory content never leaves your machine",
+      "category": "productivity",
+      "tags": [
+        "memory",
+        "persistent-memory",
+        "long-term-memory",
+        "cross-project",
+        "codex",
+        "opencode",
+        "mcp",
+        "embeddings",
+        "semantic-search",
+        "sqlite"
+      ]
     },
     {
       "name": "slack-board",
@@ -19,7 +32,18 @@
         "source": "github",
         "repo": "d2a8k3u/slack-board"
       },
-      "description": "Board of Slack messages for you: drafts replies in your tone of voice and sends them after your approval"
+      "description": "Board of Slack messages for you: drafts replies in your tone of voice and sends them after your approval",
+      "category": "productivity",
+      "tags": [
+        "slack",
+        "jira",
+        "inbox",
+        "reply-drafts",
+        "tone-of-voice",
+        "approval",
+        "notifications",
+        "mcp"
+      ]
     }
   ]
 }
