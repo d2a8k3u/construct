@@ -1,5 +1,5 @@
 name: Install failure
-description: A plugin does not install or update from the construct marketplace.
+description: A plugin does not install or update from the d2a8k3u-construct marketplace.
 labels: [bug]
 body:
   - type: dropdown
