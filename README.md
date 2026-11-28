@@ -13,7 +13,7 @@ claude plugin install <plugin>@construct
 
 | Plugin | What it does | Requirements and setup |
 | --- | --- | --- |
-| `adaptive-cognitive-memory` | One local memory shared by every project: what Claude Code stores in one session comes back in later sessions. | [d2a8k3u/adaptive-cognitive-memory](https://github.com/d2a8k3u/adaptive-cognitive-memory) |
+| `adaptive-cognitive-memory` | One local memory for Claude Code, Codex and OpenCode, shared by every project: what the agent stores in one session comes back in later sessions, on any of the three. | [d2a8k3u/adaptive-cognitive-memory](https://github.com/d2a8k3u/adaptive-cognitive-memory) |
 | `slack-board` | A board of your Slack messages: drafts replies in your tone of voice and sends them after your approval. | [d2a8k3u/slack-board](https://github.com/d2a8k3u/slack-board) |
 
 ## Updates
