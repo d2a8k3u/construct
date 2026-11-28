@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: adaptive-cognitive-memory bug or idea
+    url: https://github.com/d2a8k3u/adaptive-cognitive-memory/issues/new/choose
+    about: Recall, capture or the doctor misbehaves once the plugin is installed.
+  - name: slack-board bug or idea
+    url: https://github.com/d2a8k3u/slack-board/issues/new/choose
+    about: The board, drafts or sending misbehave once the plugin is installed.
+  - name: Security vulnerability
+    url: https://github.com/d2a8k3u/construct/security/advisories/new
+    about: Report it privately, never in a public issue.
